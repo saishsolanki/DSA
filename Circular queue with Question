@@ -1,0 +1,25 @@
+Implement Circular queue and its operations.
+
+Read the size of the queue and perform the following.
+
+Enqueue (50)
+
+Enqueue (100)
+
+Enqueue (25)
+
+Enqueue (150)
+
+Enqueue (250); Display()
+
+Dequeue(); Display()
+
+Enqueue(50); Display()
+
+Dequeue();Display()
+
+Dequeue();Display()
+
+Enqueue(90); Display()
+
+Enqueue(80); Display()

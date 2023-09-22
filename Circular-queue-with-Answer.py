@@ -53,9 +53,36 @@ class circularQueue(object):
             self.__size -= 1
             return dequeued
 
-    def peek(self):
-        ''' Peek at head of list '''
-        if self.__isEmpty():
-            return False
-        else:
-            return self.queue[self.__frontPointer]
+    def display(self):
+        ''' Display the entire queue as a string '''
+        string = 'Circular Queue:\n'
+        for i in range(self.__frontPointer, self.__frontPointer + self.__size):
+            string += '{!s:3}'.format(i % self.__max) + ' : ' + str(self.queue[i % self.__max]) + '\n'
+        print(string)
+        
+if __name__ == "__main__":
+    max_size = 10
+    cq = circularQueue(max_size)
+
+    cq.enqueue(50)
+    cq.enqueue(100)
+    cq.enqueue(25)
+    cq.enqueue(150)
+    cq.enqueue(250)
+    cq.display()
+
+    cq.dequeue()
+    cq.display()
+    cq.enqueue(50)
+    cq.display()
+    
+    cq.dequeue()
+    cq.display()
+    
+    cq.dequeue()
+    cq.display()
+    
+    cq.enqueue(90)
+    cq.display()
+    cq.enqueue(80)
+    cq.display()
